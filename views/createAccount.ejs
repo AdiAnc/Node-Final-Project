@@ -1,0 +1,102 @@
+<html>
+
+<head>
+ 
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    h1 {
+        color: #333;
+        font-family: "Arial", sans-serif;
+        font-size: 36px;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+    form {
+      display: inline-block;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="password"], 
+    input[type="permession"]{
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      text-decoration: none;
+      color: #337ab7;
+    }
+    img.logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+      }
+  </style>
+<div style="display: flex; justify-content: center; flex-wrap: wrap">
+  <a href="/movies" class="button">Movies</a>
+  <a href="/users" class="button">Manage User</a>
+</div>
+</head>
+
+
+<body>
+  <img src="https://img.icons8.com/?size=50&id=lEV2xeBg4PUI&format=png" alt="Logo" class="logo">
+    <h1>Create User's Account</h1>
+  <form action="/login/create" method="post">
+    <label for="userName">User Name:</label><br>
+    <input type="text" id="userName" name="userName"><br>
+
+    <label for="userName">Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName"><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+
+    <label for="permession">Permession:</label><br>
+    <input type="permession" id="permession" name="permession"><br><br>
+
+    <input type="submit" value="Create">
+  </form>
+</body>
+
+</html>

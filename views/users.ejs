@@ -1,0 +1,95 @@
+
+<html>
+    <style>
+        .logedin {
+      max-width: 100px;
+      margin: 0 auto;
+      padding: 20px;
+      position: fixed;
+       top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+        color: #333;
+        font-family: "Arial", sans-serif;
+        font-size: 36px;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+    form {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    img.logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+      }
+    </style>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap">
+      <a href="/movies" class="button">Movies</a>
+      <a href="/users" class="button">Manage User</a>
+    </div>
+    <div class="logedin">
+        <% if (dataLogin) { %>
+          <div>Welcome, <%= dataLogin.userName %>!</div>
+          <!-- Display the username from the dataLogin object -->
+        <% } else { %>
+          <div>Welcome, <%= dataLogin.userName %>!</div>
+          <!-- Display the user's name -->
+        <% } %>
+        </div>
+    <img src="https://img.icons8.com/?size=50&id=lEV2xeBg4PUI&format=png" alt="Logo" class="logo">
+
+
+    <h1> Manage Users </h1>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap">
+    <form action="/users/all">
+        <input type="submit" value="All Users" />
+    </form>
+    
+    <form action="/login/create">
+        <input type="submit" value="Add User"/>
+    </form>
+   </div>
+    </html>

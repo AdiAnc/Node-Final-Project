@@ -1,0 +1,123 @@
+<html>
+  <style>
+    .logedin {
+      max-width: 100px;
+      margin: 0 auto;
+      padding: 20px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    .movie-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .movie-details {
+      margin-top: 5px;
+      color: #888;
+    }
+
+    .movie-image {
+      max-width: 200px;
+    }
+
+    .edit-link {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .edit-link:hover {
+      color: #0056b3;
+    }
+    img.logo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #333;
+      border-radius: 5px;
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+      }
+  </style>
+  <div style="display: flex; justify-content: center; flex-wrap: wrap">
+    <a href="/movies" class="button">Movies</a>
+    <a href="/users" class="button">Manage User</a>
+  </div>
+  <div class="logedin">
+    <% if (dataLogin) { %>
+    <div>Welcome, <%= dataLogin.userName %>!</div>
+    <!-- Display the username from the dataLogin object -->
+    <% } else { %>
+    <div>Welcome, <%= dataLogin.userName %>!</div>
+    <!-- Display the user's name -->
+    <% } %>
+  </div>
+  <img
+    src="https://img.icons8.com/?size=50&id=lEV2xeBg4PUI&format=png"
+    alt="Logo"
+    class="logo"
+  />
+  <body>
+    <h1>All Movies</h1>
+
+    <ul>
+      <% allmovies.forEach(function(movie) { %>
+      <li>
+        <p class="movie-name"><%= movie.name %></p>
+        <p class="movie-details">
+          Premiered: <%= movie.premiered %> | Genres: <%= movie.genres %> | ID:
+          <%= movie.id %> | MongoDB ID: <%= movie._id %>
+        </p>
+        <img src="<%= movie.image %>" class="movie-image" />
+        <br /><br />
+        <a href="/movies/edit/<%= movie.id %>" class="edit-link"
+          >Edit <%= movie.name %></a
+        >
+        <br /><br /><br />
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

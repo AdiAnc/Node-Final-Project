@@ -1,0 +1,28 @@
+<!-- layout.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <!-- Include the logo partial -->
+            <% include logo %>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Content from individual page views will be rendered here -->
+        <%= content %>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
+</body>
+</html>

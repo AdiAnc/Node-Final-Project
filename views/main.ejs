@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies Web Site</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .logedin {
+        max-width: 100px;
+        margin: 0 auto;
+        padding: 20px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      h1 {
+        color: #333;
+        font-family: "Arial", sans-serif;
+        font-size: 36px;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+      }
+      img.logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+
+  <div class="container">
+    <body>
+      <h1>Movies Web Site</h1>
+      <div class="logedin">
+        <% if (dataLogin) { %>
+        <div>Welcome, <%= dataLogin.userName %>!</div>
+        <!-- Display the username from the dataLogin object -->
+        <% } else { %>
+        <div>Welcome, <%= dataLogin.userName %>!</div>
+        <!-- Display the user's name -->
+        <% } %>
+        <img
+          src="https://img.icons8.com/?size=50&id=lEV2xeBg4PUI&format=png"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap">
+        <a href="/movies" class="button">Movies</a>
+        <a href="/users" class="button">Manage User</a>
+      </div>
+    </body>
+  </div>
+</html>
