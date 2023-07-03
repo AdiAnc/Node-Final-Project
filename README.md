@@ -14,7 +14,9 @@ After success logging the dataLogin saves in the session and will be called in t
    When clicking on the movies page > the application checks if the "moviesUpdated" is true ot false > if false:
     -> the app retrive all the movies data from the the WS (https://api.tvmaze.com/shows) ->  store the record in the DB > change the flag to false.
  If true > Get all the records from the DB.
-4. Edit Movie Page :
+![image](https://github.com/AdiAnc/Node-Final-Project/assets/107412958/228db443-a130-4bde-a894-e3da703871a7)
+
+5. Edit Movie Page :
  ![image](https://github.com/AdiAnc/Node-Final-Project/assets/107412958/dec82caf-dd3a-457f-bc77-a2f0dead63bc)
   
 6. Add movie Page :
