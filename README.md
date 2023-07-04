@@ -1,6 +1,7 @@
 # Node-Final-Project
 Web application for Movies &amp; User management
 
+https://github.com/AdiAnc/Node-Final-Project/assets/107412958/53ddf5c3-279a-4883-952c-a0bf2729dd40
 
 1. Login page :
 When login in > req data sends from the route to login function > findOne Schema function check if the user name and password are valid:
